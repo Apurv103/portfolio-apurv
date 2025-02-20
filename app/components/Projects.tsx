@@ -11,6 +11,7 @@ const projects = [
     description:
       "A nutrition tracking app that helps users monitor food intake and get diet recommendations.",
     video: "/nutriserve.mp4",
+    image: "/Nutriserve.png",
     liveLink: "https://your-live-project.com",
     githubLink: "https://github.com/yourusername/nutriserve",
     tech: ["React", "Node.js", "MongoDB"],
@@ -56,7 +57,7 @@ const Projects = () => {
                 />
               ) : (
                 <Image
-                  src={project.image ? project.image : defaultImage}
+                  src={project.image || defaultImage}
                   alt={project.title ?? "Project Image"}
                   width={500}
                   height={300}
