@@ -52,7 +52,7 @@ const Contact = () => {
     <section id='contact' className='py-20 bg-red-50'>
       <div className='max-w-5xl mx-auto px-6'>
         <h2 className='relative text-4xl font-bold text-red-400 text-center inline-block'>
-          Let's Connect! 💌
+          Let &apos;s Connect! 💌
           <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
         </h2>
 

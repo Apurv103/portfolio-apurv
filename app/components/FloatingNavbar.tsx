@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import {
   FaBriefcase,
-  FaGraduationCap,
   FaUser,
   FaProjectDiagram,
   FaEnvelope,

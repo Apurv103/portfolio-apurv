@@ -1,9 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-
-const defaultImage = "/Nutriserve.png";
 
 const projects = [
   {
@@ -13,8 +10,7 @@ const projects = [
       "A nutrition tracking app that helps users monitor food intake and get diet recommendations.",
     video:
       "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/nutriserve.mp4",
-    image:
-      "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/Nutriserve.png",
+
     liveLink: "https://your-live-project.com",
     githubLink: "https://github.com/yourusername/nutriserve",
     tech: ["React", "Node.js", "MongoDB"],
@@ -26,8 +22,7 @@ const projects = [
       "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/MFLIX.mp4",
     description:
       "A full-stack movie browsing application built with Node.js, Express, MongoDB, and Handlebars.",
-    image:
-      "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/Mflix.png",
+
     liveLink: "",
     githubLink: "https://github.com/chandrikakillada/MFLIX",
     tech: ["Express", "MongoDB", "Node JS"],
