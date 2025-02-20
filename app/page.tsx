@@ -5,6 +5,7 @@ import ToolKit from "./components/ToolKit";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import FloatingNavbar from "./components/FloatingNavbar";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main className='min-h-screen bg-blue-50 '>
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <ToolKit />
       <Contact />
+      <Footer />
     </main>
   );
 }
