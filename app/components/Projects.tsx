@@ -12,7 +12,8 @@ const projects = [
       "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/nutriserve.mp4",
 
     liveLink: "https://your-live-project.com",
-    githubLink: "https://github.com/yourusername/nutriserve",
+    githubLink:
+      "https://github.com/2024-Winter-ITE-5425-0NA/project-react-client-webdriver",
     tech: ["React", "Node.js", "MongoDB"],
   },
   {
