@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import defaultImage from "@/public/Nutriserve.png";
 
 const projects = [
   {
@@ -55,11 +56,10 @@ const Projects = () => {
                 />
               ) : (
                 <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  className='w-full h-full object-cover'
+                  src={project.image ?? defaultImage}
+                  alt={project.title ?? "Project Image"}
+                  width={500}
+                  height={300}
                 />
               )}
             </div>
