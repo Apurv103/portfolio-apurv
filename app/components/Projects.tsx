@@ -52,23 +52,13 @@ const Projects = () => {
             whileHover={{ scale: 1.02 }}
           >
             <div className='w-full h-[250px] relative'>
-              {project.video ? (
-                <video
-                  src={project.video}
-                  className='absolute inset-0 w-full h-full object-cover'
-                  autoPlay
-                  loop
-                  muted
-                />
-              ) : (
-                <Image
-                  src={project.image ?? defaultImage}
-                  alt={project.title ?? "Project Image"}
-                  width={600}
-                  height={400}
-                  unoptimized
-                />
-              )}
+              <video
+                src={project.video}
+                className='absolute inset-0 w-full h-full object-cover'
+                autoPlay
+                loop
+                muted
+              />
             </div>
 
             <div className='absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 p-6 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
