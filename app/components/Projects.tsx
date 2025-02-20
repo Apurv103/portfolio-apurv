@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import defaultImage from "@/public/Nutriserve.png";
 
 const projects = [
   {
@@ -10,7 +9,8 @@ const projects = [
     title: "Nutri Serve",
     description:
       "A nutrition tracking app that helps users monitor food intake and get diet recommendations.",
-    video: "/nutriserve.mp4",
+    video:
+      "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/nutriserve.mp4",
     image:
       "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/Nutriserve.png",
     liveLink: "https://your-live-project.com",
@@ -20,10 +20,12 @@ const projects = [
   {
     id: 2,
     title: "MFLIX",
-    video: "/MFLIX.mp4",
+    video:
+      "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/MFLIX.mp4",
     description:
       "A full-stack movie browsing application built with Node.js, Express, MongoDB, and Handlebars.",
-    image: "/Mflix.png",
+    image:
+      "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/Mflix.png",
     liveLink: "",
     githubLink: "https://github.com/chandrikakillada/MFLIX",
     tech: ["Express", "MongoDB", "Node JS"],
@@ -48,7 +50,7 @@ const Projects = () => {
             whileHover={{ scale: 1.02 }}
           >
             <div className='w-full h-[250px] relative'>
-              {/* {project.video ? (
+              {project.video ? (
                 <video
                   src={project.video}
                   className='absolute inset-0 w-full h-full object-cover'
@@ -56,15 +58,15 @@ const Projects = () => {
                   loop
                   muted
                 />
-              ) : ( */}
-              <Image
-                src={project.image || defaultImage}
-                alt={project.title ?? "Project Image"}
-                width={500}
-                height={300}
-                unoptimized
-              />
-              {/* )} */}
+              ) : (
+                <Image
+                  src={project.image}
+                  alt={project.title ?? "Project Image"}
+                  width={500}
+                  height={300}
+                  unoptimized
+                />
+              )}
             </div>
 
             <div className='absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 p-6 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
