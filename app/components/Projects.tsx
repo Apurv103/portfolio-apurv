@@ -61,10 +61,9 @@ const Projects = () => {
               ) : (
                 <Image
                   src={project.image}
-                  alt={project.title ?? "Project Image"}
-                  width={500}
-                  height={300}
-                  unoptimized
+                  alt={project.title}
+                  width={600}
+                  height={400}
                 />
               )}
             </div>
