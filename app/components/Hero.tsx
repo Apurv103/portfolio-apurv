@@ -5,31 +5,44 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className=''>
+    <section className=' '>
       <div className='flex flex-col md:flex-row items-center justify-center text-center md:text-left py-52 px-6'>
         <div className='md:w-1/2'>
           <motion.h1
-            className='text-4xl md:text-4xl font-extrabold text-gray-800 dark:text-red-400 relative inline-block'
+            className='text-4xl md:text-3xl font-extrabold text-gray-800 dark:text-red-400 relative inline-block'
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <span className='relative dark:text-red-400'>
-              <span className='relative inline-block'>
-                Hello! I am Chandrika
-                <span className='absolute left-0 bottom-0 w-full h-4 bg-red-300 opacity-50 blur-md'></span>
-              </span>
-            </span>{" "}
-            👋
+            <h2 className='relative text-4xl font-bold text-gray-800  dark:text-red-400 text-center inline-block'>
+              Hello, I am Chandrika
+              <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
+            </h2>
+            <span className='text-gray-500 blinking-cursor'>|</span>
           </motion.h1>
+
+          <style jsx>{`
+            .blinking-cursor {
+              display: inline-block;
+              margin-left: 5px;
+              animation: blink 1s infinite;
+            }
+
+            @keyframes blink {
+              50% {
+                opacity: 0;
+              }
+            }
+          `}</style>
+
           <motion.p
             className='mt-4 text-lg md:text-xl text-gray-600'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            A Full-Stack Developer passionate about building modern, scalable
-            web applications. ✨
+            A <span className='text-red-500'>Full-Stack Developer</span>{" "}
+            passionate about building modern, scalable web applications. ✨
           </motion.p>
         </div>
 

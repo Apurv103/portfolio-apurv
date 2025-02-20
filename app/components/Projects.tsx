@@ -17,6 +17,7 @@ const projects = [
   {
     id: 2,
     title: "MFLIX",
+    video: "/MFLIX.mp4",
     description:
       "A full-stack movie browsing application built with Node.js, Express, MongoDB, and Handlebars.",
     image: "/Mflix.png",
@@ -29,11 +30,11 @@ const projects = [
 const Projects = () => {
   return (
     <section id='projects' className='py-20 bg-white-100'>
-      <div className='text-center dark:text-red-400'>
-        <h2 className='text-4xl font-bold'>Projects</h2>
-        <p className='mt-2 text-lg text-gray-600 dark:text-red-400'>
-          Hover over a project to see details!
-        </p>
+      <div className='flex justify-center relative text-4xl font-bold text-red-400 text-center inline-block pb-2'>
+        <h2>
+          Projects
+          <span className='absolute left-1/2 bottom-[-4px] w-[14%] h-[8px] bg-red-300 opacity-150 blur-md rounded-lg transform -translate-x-1/2'></span>
+        </h2>
       </div>
 
       <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6'>
@@ -43,7 +44,7 @@ const Projects = () => {
             className='relative bg-white rounded-lg overflow-hidden shadow-lg group'
             whileHover={{ scale: 1.02 }}
           >
-            <div className='w-full h-[250px] '>
+            <div className='w-full h-[250px] relative'>
               {project.video ? (
                 <video
                   src={project.video}
@@ -58,12 +59,12 @@ const Projects = () => {
                   alt={project.title}
                   width={600}
                   height={400}
-                  className='w-full object-cover'
+                  className='w-full h-full object-cover'
                 />
               )}
             </div>
 
-            <div className='absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 p-6 text-white text-center'>
+            <div className='absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 p-6 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
               <h3 className='text-xl font-semibold'>{project.title}</h3>
               <p className='mt-2 text-sm'>{project.description}</p>
 
@@ -78,20 +79,22 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className='mt-4 flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
-                <a
-                  href={project.liveLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='px-4 py-2 bg-gray-700 hover:bg-pink-600 text-white rounded-lg text-sm font-semibold'
-                >
-                  View Live
-                </a>
+              <div className='mt-4 flex gap-4'>
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='px-4 py-2 bg-gray-700 hover:bg-red-400 text-white rounded-lg text-sm font-semibold'
+                  >
+                    View Live
+                  </a>
+                )}
                 <a
                   href={project.githubLink}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='px-4 py-2 bg-gray-700 hover:bg-pink-600 text-white rounded-lg text-sm font-semibold'
+                  className='px-4 py-2 bg-gray-700 hover:bg-red-400 text-white rounded-lg text-sm font-semibold'
                 >
                   GitHub
                 </a>
@@ -99,6 +102,9 @@ const Projects = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className='flex justify-center relative text-2xl mt-10 font-bold text-black text-center inline-block pb-2'>
+        <p>Hover over to see the details!</p>
       </div>
     </section>
   );

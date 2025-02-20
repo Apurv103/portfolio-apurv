@@ -5,16 +5,14 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id='about' className='py-20 bg-white '>
+    <section id='about' className='py-20  '>
       <div className='max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center'>
-        {/* Text Content */}
         <motion.div
           className='md:w-3/4 text-center md:text-left'
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {/* About Me Header with Faded Underline */}
           <h2 className='relative text-4xl font-bold dark:text-red-400 inline-block'>
             About Me
             <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
@@ -43,7 +41,6 @@ const About = () => {
           </ul>
         </motion.div>
 
-        {/* Profile Image - Styled as Circular */}
         <motion.div
           className='mt-10 md:mt-0 md:w-1/4 flex justify-center'
           initial={{ opacity: 0, scale: 0.8 }}

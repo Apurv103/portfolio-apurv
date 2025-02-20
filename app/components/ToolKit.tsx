@@ -25,7 +25,6 @@ const Toolkit = () => {
           <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
         </h2>
 
-        {/* Grid Layout for Skills */}
         <div className='mt-10 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-center'>
           {skills.map((skill, index) => (
             <motion.div
