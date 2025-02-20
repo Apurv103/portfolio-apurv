@@ -56,10 +56,11 @@ const Projects = () => {
                 />
               ) : (
                 <Image
-                  src={project.image ?? defaultImage}
+                  src={project.image ? project.image : defaultImage}
                   alt={project.title ?? "Project Image"}
                   width={500}
                   height={300}
+                  unoptimized
                 />
               )}
             </div>
