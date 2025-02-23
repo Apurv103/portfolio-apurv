@@ -146,7 +146,6 @@ const Contact = () => {
                 SEND MESSAGE
               </button>
 
-              {/* Success & Error Messages */}
               {status.success && (
                 <p className='text-green-500 mt-2 text-center'>
                   ✅ Message sent successfully!

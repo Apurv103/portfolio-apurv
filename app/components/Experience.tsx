@@ -35,6 +35,17 @@ const experiences = [
     ],
     techStack: ["React", "Tailwind CSS", "FastAPI", "Material UI", ".NET"],
     icon: <FaBriefcase className='text-red-500' />,
+    type: "work",
+  },
+  {
+    title: "Post Graduate Certificate in IT",
+    company: "Humber College",
+    date: "Sep 2022 - Apr 2024",
+    description: ["Dean’s Honour List Awardee"],
+    link: "https://www.linkedin.com/posts/chandrikakillada_deanslist-humbercollege-appliedsciences-activity-7164469223375777792-6zWi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfUx6kB5PP0vfkIi4V0h6H8Mx_Nx435SGk",
+    techStack: ["Software Engineering", "Cloud Computing"],
+    icon: <FaGraduationCap className='text-red-500' />,
+    type: "education",
   },
   {
     title: "Project Engineer",
@@ -48,15 +59,7 @@ const experiences = [
     ],
     techStack: ["Angular", "Spring Boot", "MySQL", "Docker", "Kubernetes"],
     icon: <FaBriefcase className='text-red-500' />,
-  },
-  {
-    title: "Post Graduate Certificate in IT",
-    company: "Humber College",
-    date: "Sep 2022 - Apr 2024",
-    description: ["Dean’s Honour List Awardee"],
-    link: "https://www.linkedin.com/posts/chandrikakillada_deanslist-humbercollege-appliedsciences-activity-7164469223375777792-6zWi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfUx6kB5PP0vfkIi4V0h6H8Mx_Nx435SGk",
-    techStack: ["Software Engineering", "Cloud Computing"],
-    icon: <FaGraduationCap className='text-red-500' />,
+    type: "work",
   },
   {
     title: "B.Tech in Computer Science & Engineering",
@@ -65,6 +68,7 @@ const experiences = [
     description: [],
     techStack: ["C", "C++", "Data Structures", "Algorithms"],
     icon: <FaGraduationCap className='text-red-500' />,
+    type: "education",
   },
 ];
 
@@ -72,10 +76,8 @@ const Experience = () => {
   return (
     <section
       id='experience'
-      className='bg-white text-red-400 relative overflow-hidden mt-20'
+      className='bg-white text-red-400 relative overflow-hidden '
     >
-      <FloatingNavbar />
-
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
@@ -111,13 +113,12 @@ const Experience = () => {
         </motion.div>
       ))}
 
+      {/* Title */}
       <div className='flex justify-center relative text-4xl font-bold text-red-400 text-center inline-block pb-2 mt-10'>
-        <h2>
-          My Journey
-          <span className='absolute left-1/2 bottom-[-4px] w-[14%] h-[8px] bg-red-300 opacity-150 blur-md rounded-lg transform -translate-x-1/2'></span>
-        </h2>
+        <h2>My Journey</h2>
       </div>
 
+      {/* Timeline Container */}
       <div className='py-16 px-6 relative max-w-3xl mx-auto'>
         {experiences.map((exp, index) => (
           <motion.div
@@ -128,16 +129,22 @@ const Experience = () => {
             className='mb-10 relative flex items-start'
           >
             {/* Date Section */}
-            <div className='w-1/4 mt-1 text-right pr-4 text-gray-600'>
+            <div className='w-1/4 mt-1 text-right pr-4 text-black'>
               {exp.date}
             </div>
 
-            {/* Timeline Line */}
-            <div className='relative flex flex-col items-center'>
-              <div className='p-2 rounded-full'>{exp.icon}</div>
+            <div className='relative flex flex-col items-center w-12'>
+              {index < experiences.length - 1 &&
+                exp.type === "work" &&
+                experiences[index + 1].type === "work" && (
+                  <div className='w-[3px] bg-red-500 absolute top-8 bottom-[-40px]'></div>
+                )}
+
+              <div className='p-3 bg-white shadow-md rounded-full relative z-10 border border-red-400'>
+                {exp.icon}
+              </div>
             </div>
 
-            {/* Job/Education Details */}
             <div className='w-3/4 bg-pink-50 p-4 rounded-lg shadow-lg ml-4'>
               <h3 className='text-xl font-bold mt-1 text-red-800'>
                 {exp.title}
@@ -163,8 +170,6 @@ const Experience = () => {
                   </li>
                 ))}
               </ul>
-
-              {/* Tech Stack Badges */}
               <div className='flex flex-wrap gap-2 mt-4'>
                 {exp.techStack.map((tech, i) => (
                   <span

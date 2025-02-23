@@ -1,17 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Custom styling */
+
 body {
   font-family: "Inter", sans-serif;
 }
 .timeline {
   display: flex;
-  flex-direction: column; /* or row */
+  flex-direction: column;
 }
 
 .timeline-item {
   display: flex;
-  justify-content: space-between; /* Adjust based on your design */
-  margin: 10px 0; /* Space between items */
+  justify-content: space-between;
+  margin: 10px 0;
 }

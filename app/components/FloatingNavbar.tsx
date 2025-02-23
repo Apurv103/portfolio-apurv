@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 
 const sections = [
-  { id: "about", icon: <FaUser />, label: "About" },
   { id: "experience", icon: <FaBriefcase />, label: "Experience" },
   { id: "projects", icon: <FaProjectDiagram />, label: "Projects" },
+  { id: "about", icon: <FaUser />, label: "About" },
   { id: "contact", icon: <FaEnvelope />, label: "Contact" },
 ];
 
@@ -38,7 +38,7 @@ const FloatingNavbar = () => {
   }, []);
 
   return (
-    <nav className='fixed right-6 top-1/3 flex flex-col space-y-4 bg-white/80 p-4 rounded-lg shadow-lg'>
+    <nav className='fixed top-1/3 right-4 sm:right-6 flex flex-col space-y-4 p-2 sm:p-4 bg-white/80 rounded-lg shadow-lg z-50'>
       {sections.map((section) => (
         <button
           key={section.id}
@@ -47,7 +47,7 @@ const FloatingNavbar = () => {
               .getElementById(section.id)
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className={`p-3 rounded-full transition ${
+          className={`p-3 sm:p-4 rounded-full transition ${
             activeSection === section.id
               ? "bg-red-500 text-white"
               : "bg-gray-200 text-gray-800"
