@@ -28,6 +28,19 @@ const projects = [
     githubLink: "https://github.com/chandrikakillada/MFLIX",
     tech: ["Express", "MongoDB", "Node JS"],
   },
+
+  {
+    id: 3,
+    title: "Omnifood",
+    video:
+      "https://user-images.githubusercontent.com/37527885/128391666-0c4a4021-f22c-4519-9d8e-7d3a712e9889.mp4",
+    description:
+      "A full-stack movie browsing application built with Node.js, Express, MongoDB, and Handlebars.",
+
+    liveLink: "https://bright-bonbon-9d881a.netlify.app/",
+    githubLink: "https://github.com/chandrikakillada/Omnifood",
+    tech: ["HTML", "CSS", "JS"],
+  },
 ];
 
 const Projects = () => {

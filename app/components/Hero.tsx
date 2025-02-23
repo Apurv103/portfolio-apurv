@@ -15,7 +15,7 @@ const Hero = () => {
             transition={{ duration: 1 }}
           >
             <h2 className='relative text-4xl font-bold text-gray-800  dark:text-red-400 text-center inline-block'>
-              Hello, I &apos;m Chandrika
+              Hello, I&apos;m Chandrika
               <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
             </h2>
             <span className='text-gray-500 blinking-cursor'>|</span>
