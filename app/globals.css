@@ -5,13 +5,3 @@
 body {
   font-family: "Inter", sans-serif;
 }
-.timeline {
-  display: flex;
-  flex-direction: column;
-}
-
-.timeline-item {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-}
