@@ -7,7 +7,14 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        quicksand: ["Quicksand", "serif"],
+        sarala: ["Sarala", "serif"],
+        caveat: ["Caveat", "serif"],
+        fuzzy: ["Fuzzy Bubbles", "serif"],
+      },
+    },
   },
   plugins: [],
 };

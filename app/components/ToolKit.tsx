@@ -18,14 +18,14 @@ const skills = [
 
 const Toolkit = () => {
   return (
-    <section id='toolkit' className='py-20 bg-white'>
+    <section id='toolkit' className='py-20 bg-white font-sarala'>
       <div className='max-w-5xl mx-auto px-6'>
         <h2 className='relative text-4xl font-bold text-gray-800  dark:text-red-400 text-center inline-block'>
           My Toolkit 🖥️
           <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
         </h2>
 
-        <div className='mt-10 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-center'>
+        <div className='mt-10 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-center font-quicksand'>
           {skills.map((skill, index) => (
             <motion.div
               key={index}

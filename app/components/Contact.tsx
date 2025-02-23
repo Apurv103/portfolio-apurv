@@ -49,21 +49,21 @@ const Contact = () => {
   };
 
   return (
-    <section id='contact' className='py-20 bg-red-50'>
-      <div className='max-w-5xl mx-auto px-6'>
+    <section id='contact' className='py-20 bg-red-50  '>
+      <div className='max-w-5xl mx-auto px-6 font-sarala'>
         <h2 className='relative text-4xl font-bold text-red-400 text-center inline-block'>
           Let &apos;s Connect! 💌
           <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
         </h2>
 
-        <div className='mt-10 flex flex-col md:flex-row items-center justify-between'>
+        <div className='mt-10 flex flex-col md:flex-row items-center justify-between font-quicksand'>
           <motion.div
             className='md:w-1/2 text-center md:text-left px-6'
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <p className='text-lg text-gray-600 '>
+            <p className='text-lg text-gray-600  \'>
               Let’s Make Something Awesome Together! Whether it’s coding,
               brainstorming the next big idea, or just chatting about tech over
               coffee ☕ I’d love to connect! Feel free to reach out, and let’s

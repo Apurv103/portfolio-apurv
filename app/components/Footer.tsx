@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className='w-full bg-gray-900 text-white text-center py-6 px-4 mt-8'>
+    <footer className='w-full bg-gray-900 text-white text-center py-6 px-4 mt-8 font-sarala'>
       <p className='text-sm sm:text-base'>
         Made by <span className='font-semibold'>Chandrika</span> K 🌸
       </p>

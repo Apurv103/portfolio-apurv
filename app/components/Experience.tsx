@@ -11,7 +11,6 @@ import {
   FaCloud,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import FloatingNavbar from "./FloatingNavbar";
 
 const floatingIcons = [
   { icon: <FaCode className='text-blue-300 text-2xl' /> },
@@ -76,7 +75,7 @@ const Experience = () => {
   return (
     <section
       id='experience'
-      className='bg-white text-red-400 relative overflow-hidden '
+      className='bg-white text-red-400 relative overflow-hidden font-quicksand  '
     >
       {floatingIcons.map((item, i) => (
         <motion.div
@@ -114,12 +113,12 @@ const Experience = () => {
       ))}
 
       {/* Title */}
-      <div className='flex justify-center relative text-4xl font-bold text-red-400 text-center inline-block pb-2 mt-10'>
+      <div className='flex justify-center relative text-4xl font-bold text-red-400 text-center inline-block pb-2 mt-10 font-sarala'>
         <h2>My Journey</h2>
       </div>
 
       {/* Timeline Container */}
-      <div className='py-16 px-6 relative max-w-3xl mx-auto'>
+      <div className='py-16 px-6 relative max-w-3xl mx-auto '>
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
@@ -128,8 +127,7 @@ const Experience = () => {
             transition={{ duration: 0.6, delay: index * 0.2 }}
             className='mb-10 relative flex items-start'
           >
-            {/* Date Section */}
-            <div className='w-1/4 mt-1 text-right pr-4 text-black'>
+            <div className='w-[30%] mt-2 text-right pr-4 text-black font-bold'>
               {exp.date}
             </div>
 

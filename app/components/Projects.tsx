@@ -34,8 +34,7 @@ const projects = [
     title: "Omnifood",
     video:
       "https://user-images.githubusercontent.com/37527885/128391666-0c4a4021-f22c-4519-9d8e-7d3a712e9889.mp4",
-    description:
-      "A full-stack movie browsing application built with Node.js, Express, MongoDB, and Handlebars.",
+    description: "A full-stack food browsing application built with Node.js",
 
     liveLink: "https://bright-bonbon-9d881a.netlify.app/",
     githubLink: "https://github.com/chandrikakillada/Omnifood",
@@ -45,12 +44,15 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id='projects' className='py-20 bg-white-100'>
-      <div className='flex justify-center relative text-4xl font-bold text-red-400 text-center inline-block pb-2'>
+    <section id='projects' className='font-quicksand py-20 bg-white-100'>
+      <div className='flex justify-center relative text-4xl font-bold text-red-400 text-center inline-block pb-2 font-sarala'>
         <h2>
           Projects
-          <span className='absolute left-1/2 bottom-[-4px] w-[14%] h-[8px] bg-red-300 opacity-150 blur-md rounded-lg transform -translate-x-1/2'></span>
+          <span className='absolute left-1/2 bottom-[-4px] w-[10%] h-[8px] bg-red-300 opacity-150 blur-md rounded-lg transform -translate-x-1/2'></span>
         </h2>
+      </div>
+      <div className='flex justify-center relative text-2xl mt-10 font-bold text-black text-center inline-block pb-2'>
+        <p>Hover over to see the details maybe?</p>
       </div>
 
       <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6'>
@@ -108,9 +110,6 @@ const Projects = () => {
             </div>
           </motion.div>
         ))}
-      </div>
-      <div className='flex justify-center relative text-2xl mt-10 font-bold text-black text-center inline-block pb-2'>
-        <p>Hover over to see the details!</p>
       </div>
     </section>
   );

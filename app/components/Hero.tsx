@@ -5,16 +5,16 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className='w-full bg-blue-50'>
+    <section className='w-full bg-blue-50 '>
       <div className='flex flex-col md:flex-row items-center justify-between text-center md:text-left py-32 px-6 md:px-12 lg:px-24'>
         <div className='md:w-1/2'>
           <motion.h1
-            className='text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 dark:text-red-400 relative inline-block leading-snug'
+            className=' dark:text-red-400 relative inline-block leading-snug'
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className='relative text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-red-400 text-center md:text-left'>
+            <h2 className='relative text-4xl font-bold text-gray-800 dark:text-red-400 text-center md:text-left font-sarala'>
               Hello, I&apos;m Chandrika
               <span className='blinking-cursor text-gray-600'>|</span>
               <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
@@ -36,7 +36,7 @@ const Hero = () => {
           `}</style>
 
           <motion.p
-            className='mt-4 text-lg md:text-xl text-gray-700 '
+            className='mt-4 text-lg md:text-xl text-gray-700 font-quicksand '
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
