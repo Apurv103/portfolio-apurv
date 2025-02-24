@@ -26,7 +26,7 @@ const About = () => {
             that’s the beauty of being a developer, right? 😆
           </p>
 
-          <ul className='mt-4 text-lg text-gray-700 list-disc pl-6'>
+          <ul className='mt-4 text-m text-gray-700 list-disc pl-6 '>
             <li>
               💻 <strong>Grinding LeetCode problems</strong> just for fun (yes,
               really).
