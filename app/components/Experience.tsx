@@ -41,7 +41,7 @@ const experiences = [
     company: "Wipro Limited",
     date: "Mar 2021 - Jul 2022",
     description: [
-      "🚀 Developed and maintained full-stack features for a Banking platform.",
+      "⚡ Developed and maintained full-stack features for a Banking platform.",
       "⚡ Implemented API integrations and optimized database queries.",
       "📈 Launched bereavement support pages, increasing user engagement.",
       "⚡ Reduced page load times using lazy loading for improved performance.",
