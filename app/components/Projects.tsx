@@ -33,7 +33,7 @@ const projects = [
     video:
       "https://user-images.githubusercontent.com/37527885/128391666-0c4a4021-f22c-4519-9d8e-7d3a712e9889.mp4",
     description:
-      "A responsive food ordering platform that showcases an elegant UI and smooth user experience, built with modern web technologies.",
+      "A responsive food ordering platform that showcases an elegant UI and smooth user experience, built with modern vanilla JS.",
     liveLink: "https://bright-bonbon-9d881a.netlify.app/",
     githubLink: "https://github.com/chandrikakillada/Omnifood",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -51,10 +51,10 @@ const Projects = () => {
 
   return (
     <section id='projects' className='font-quicksand py-16 relative background'>
-      <div className='flex justify-center text-2xl md:text-3xl font-bold text-center pb-4 font-sarala px-4 md:px-0'>
-        <h2 className='relative heading leading-tight md:leading-normal'>
+      <div className='flex justify-center relative text-xl font-bold text-center inline-block pb-2 font-sarala mt-6'>
+        <h2 className='relative heading '>
           These are the projects that define my journey in development.
-          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 opacity-40 rounded-md blur-sm hidden sm:block'></span>
+          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
         </h2>
       </div>
 
