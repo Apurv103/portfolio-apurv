@@ -8,3 +8,16 @@
 /* body {
   font-family: "Inter", sans-serif;
 } */
+
+.heading {
+  color: #e96269;
+}
+
+.background {
+  background-color: #fff5f6;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  transition: all 0.2s ease-in-out;
+}

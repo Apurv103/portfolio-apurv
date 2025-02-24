@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className='w-full bg-blue-50 '>
+    <section className='w-full background'>
       <div className='flex flex-col md:flex-row items-center justify-between text-center md:text-left py-32 px-6 md:px-12 lg:px-24'>
         <div className='md:w-1/2'>
           <motion.h1
@@ -14,10 +14,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className='relative text-4xl font-bold text-gray-800 dark:text-red-400 text-center md:text-left font-sarala'>
+            <h2 className='relative text-4xl font-bold heading text-center md:text-left font-sarala'>
               Hello, I&apos;m Chandrika
               <span className='blinking-cursor text-gray-600'>|</span>
-              <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
+              <span className='absolute left-0 bottom-0 w-full h-4 bg-red-200 opacity-50 blur-sm transform translate-y-2 rounded-none'></span>
             </h2>
           </motion.h1>
 
@@ -41,8 +41,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            A <span className='text-red-500'>Full-Stack Developer</span>{" "}
-            passionate about building modern, scalable web applications. ✨
+            A <span className='text-red-500'>Full-Stack Developer </span>
+            passionate about crafting modern, scalable web applications. Turning
+            complex problems into elegant, user-friendly solutions. ✨
           </motion.p>
         </div>
 

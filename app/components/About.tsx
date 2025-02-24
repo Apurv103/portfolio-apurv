@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id='about' className='py-20 px-6 md:px-12 lg:px-24 bg-white  '>
+    <section id='about' className='py-20 px-6 md:px-12 lg:px-24 background '>
       <div className='max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10'>
         <motion.div
           className='md:w-3/4 text-center md:text-left'

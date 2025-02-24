@@ -32,7 +32,15 @@ const experiences = [
       "Enhanced UX through Figma prototypes.",
       "Increased component reusability using Material UI.",
     ],
-    techStack: ["React", "Tailwind CSS", "FastAPI", "Material UI", ".NET"],
+    techStack: [
+      "React",
+      "Figma",
+      "Tailwind CSS",
+      "FastAPI",
+      "Material UI",
+      ".NET",
+      "Scrum",
+    ],
     icon: <FaBriefcase className='text-red-500' />,
     type: "work",
   },
@@ -42,7 +50,13 @@ const experiences = [
     date: "Sep 2022 - Apr 2024",
     description: ["Dean’s Honour List Awardee"],
     link: "https://www.linkedin.com/posts/chandrikakillada_deanslist-humbercollege-appliedsciences-activity-7164469223375777792-6zWi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfUx6kB5PP0vfkIi4V0h6H8Mx_Nx435SGk",
-    techStack: ["Software Engineering", "Cloud Computing"],
+    techStack: [
+      "Advanced Web Development",
+      "Software Engineering",
+      "OOP",
+      "Database Management Systems",
+      "DSA",
+    ],
     icon: <FaGraduationCap className='text-red-500' />,
     type: "education",
   },
@@ -56,7 +70,14 @@ const experiences = [
       "Launched bereavement support pages, increasing user engagement.",
       "Reduced page load times using lazy loading.",
     ],
-    techStack: ["Angular", "Spring Boot", "MySQL", "Docker", "Kubernetes"],
+    techStack: [
+      "Angular",
+      "Spring Boot",
+      "MySQL",
+      "Docker",
+      "Kubernetes",
+      "Agile",
+    ],
     icon: <FaBriefcase className='text-red-500' />,
     type: "work",
   },
@@ -75,7 +96,7 @@ const Experience = () => {
   return (
     <section
       id='experience'
-      className='bg-white text-red-400 relative overflow-hidden font-quicksand  '
+      className='bg-white  relative overflow-hidden font-quicksand  '
     >
       {floatingIcons.map((item, i) => (
         <motion.div
@@ -112,13 +133,15 @@ const Experience = () => {
         </motion.div>
       ))}
 
-      {/* Title */}
-      <div className='flex justify-center relative text-4xl font-bold text-red-400 text-center inline-block pb-2 mt-10 font-sarala'>
-        <h2>My Journey</h2>
+      <div className='flex justify-center relative text-3xl font-bold text-center inline-block pb-2 font-sarala mt-12'>
+        <h2 className='relative heading'>
+          From There to Here: My Career Timeline 🏫
+          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
+        </h2>
       </div>
 
       {/* Timeline Container */}
-      <div className='py-16 px-6 relative max-w-3xl mx-auto '>
+      <div className='py-16 px-6 relative max-w-6xl mx-auto '>
         {experiences.map((exp, index) => (
           <motion.div
             key={index}

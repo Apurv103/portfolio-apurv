@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section id='contact' className='py-20 bg-red-50  '>
+    <section id='contact' className='py-20 background '>
       <div className='max-w-5xl mx-auto px-6 font-sarala'>
         <h2 className='relative text-4xl font-bold text-red-400 text-center inline-block'>
           Let &apos;s Connect! 💌
