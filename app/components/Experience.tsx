@@ -44,22 +44,7 @@ const experiences = [
     icon: <FaBriefcase className='text-red-500' />,
     type: "work",
   },
-  {
-    title: "Post Graduate Certificate in IT",
-    company: "Humber College",
-    date: "Sep 2022 - Apr 2024",
-    description: ["Dean’s Honour List Awardee"],
-    link: "https://www.linkedin.com/posts/chandrikakillada_deanslist-humbercollege-appliedsciences-activity-7164469223375777792-6zWi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfUx6kB5PP0vfkIi4V0h6H8Mx_Nx435SGk",
-    techStack: [
-      "Advanced Web Development",
-      "Software Engineering",
-      "OOP",
-      "Database Management Systems",
-      "DSA",
-    ],
-    icon: <FaGraduationCap className='text-red-500' />,
-    type: "education",
-  },
+
   {
     title: "Project Engineer",
     company: "Wipro Limited",
@@ -80,6 +65,22 @@ const experiences = [
     ],
     icon: <FaBriefcase className='text-red-500' />,
     type: "work",
+  },
+  {
+    title: "Post Graduate Certificate in IT",
+    company: "Humber College",
+    date: "Sep 2022 - Apr 2024",
+    description: ["Dean’s Honour List Awardee"],
+    link: "https://www.linkedin.com/posts/chandrikakillada_deanslist-humbercollege-appliedsciences-activity-7164469223375777792-6zWi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfUx6kB5PP0vfkIi4V0h6H8Mx_Nx435SGk",
+    techStack: [
+      "Advanced Web Development",
+      "Software Engineering",
+      "OOP",
+      "Database Management Systems",
+      "DSA",
+    ],
+    icon: <FaGraduationCap className='text-red-500' />,
+    type: "education",
   },
   {
     title: "B.Tech in Computer Science & Engineering",
@@ -155,12 +156,6 @@ const Experience = () => {
             </div>
 
             <div className='relative flex flex-col items-center w-12'>
-              {index < experiences.length - 1 &&
-                exp.type === "work" &&
-                experiences[index + 1].type === "work" && (
-                  <div className='w-[3px] bg-red-500 absolute top-8 bottom-[-40px]'></div>
-                )}
-
               <div className='p-3 bg-white shadow-md rounded-full relative z-10 border border-red-400'>
                 {exp.icon}
               </div>

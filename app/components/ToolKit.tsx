@@ -20,10 +20,12 @@ const Toolkit = () => {
   return (
     <section id='toolkit' className='py-20 bg-white font-sarala'>
       <div className='max-w-5xl mx-auto px-6'>
-        <h2 className='relative text-4xl font-bold text-gray-800  dark:text-red-400 text-center inline-block'>
-          My Toolkit 🖥️
-          <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
-        </h2>
+        <div className=' relative text-3xl font-bold text-center inline-block pb-2 font-sarala mt-12'>
+          <h2 className='relative heading'>
+            My Toolkit 🖥️
+            <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
+          </h2>
+        </div>
 
         <div className='mt-10 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-center font-quicksand'>
           {skills.map((skill, index) => (

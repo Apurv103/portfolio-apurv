@@ -13,11 +13,12 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h2 className='relative text-3xl sm:text-4xl font-bold text-gray-800 dark:text-red-400 inline-block font-sarala'>
-            About Me
-            <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
-          </h2>
-
+          <div className=' relative text-3xl font-bold text-center inline-block pb-2 font-sarala mt-12'>
+            <h2 className='relative heading'>
+              About me 👩
+              <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
+            </h2>
+          </div>
           <p className='mt-4 text-lg text-gray-600  leading-relaxed font-quicksand'>
             Hello again! Thanks for making it this far! Just a heads-up, my
             portfolio is always evolving (just like my code)! I’m constantly

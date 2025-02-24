@@ -2,21 +2,49 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const text = "Hii! I'm Chandrika 👋";
+  const [displayText, setDisplayText] = useState("");
+  const [cursorVisible, setCursorVisible] = useState(true);
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayText((prev) => prev + text.charAt(index));
+        index++;
+      } else {
+        clearInterval(interval);
+        setTimeout(() => {
+          setCursorVisible(false);
+          setIsTyping(false);
+        }, 1000);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className='w-full background'>
       <div className='flex flex-col md:flex-row items-center justify-between text-center md:text-left py-32 px-6 md:px-12 lg:px-24'>
         <div className='md:w-1/2'>
           <motion.h1
-            className=' dark:text-red-400 relative inline-block leading-snug'
+            className='dark:text-red-400 relative inline-block leading-snug'
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
             <h2 className='relative text-4xl font-bold heading text-center md:text-left font-sarala'>
-              Hello, I&apos;m Chandrika
-              <span className='blinking-cursor text-gray-600'>|</span>
+              {displayText}
+              {cursorVisible && (
+                <span className={`blinking-cursor ${isTyping ? "typing" : ""}`}>
+                  |
+                </span>
+              )}
               <span className='absolute left-0 bottom-0 w-full h-4 bg-red-200 opacity-50 blur-sm transform translate-y-2 rounded-none'></span>
             </h2>
           </motion.h1>
@@ -25,6 +53,10 @@ const Hero = () => {
             .blinking-cursor {
               display: inline-block;
               margin-left: 5px;
+            }
+
+            /* Blinking effect only while typing */
+            .typing {
               animation: blink 1s infinite;
             }
 
@@ -36,7 +68,7 @@ const Hero = () => {
           `}</style>
 
           <motion.p
-            className='mt-4 text-lg md:text-xl text-gray-700 font-quicksand '
+            className='mt-4 text-lg md:text-xl text-gray-700 font-quicksand'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}

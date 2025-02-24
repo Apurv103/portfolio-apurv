@@ -50,15 +50,17 @@ const Contact = () => {
 
   return (
     <section id='contact' className='py-20 background '>
-      <div className='max-w-5xl mx-auto px-6 font-sarala'>
-        <h2 className='relative text-4xl font-bold text-red-400 text-center inline-block'>
-          Let &apos;s Connect! 💌
-          <span className='absolute left-0 bottom-0 w-full h-3 bg-red-300 opacity-50 blur-md'></span>
-        </h2>
+      <div className='max-w-5xl mx-auto pr-6 font-sarala'>
+        <div className=' relative text-3xl font-bold text-center inline-block pb-2 font-sarala mt-12'>
+          <h2 className='relative heading'>
+            Let &apos;s Connect! 💌
+            <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
+          </h2>
+        </div>
 
         <div className='mt-10 flex flex-col md:flex-row items-center justify-between font-quicksand'>
           <motion.div
-            className='md:w-1/2 text-center md:text-left px-6'
+            className='md:w-1/2 text-center md:text-left'
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
