@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const text = "Hii! I'm Chandrika 👋";
+  const text = "Hi! I'm Chandrika 👋";
   const [displayText, setDisplayText] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
   const [isTyping, setIsTyping] = useState(true);
@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <section className='w-full background'>
-      <div className='flex flex-col md:flex-row items-center justify-between text-center md:text-left py-32 px-6 md:px-12 lg:px-24'>
+      <div className='flex flex-col md:flex-row items-center justify-between text-center md:text-left py-20 px-6 md:px-12 lg:px-24 pt-60'>
         <div className='md:w-1/2'>
           <motion.h1
             className='dark:text-red-400 relative inline-block leading-snug'
@@ -38,14 +38,18 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className='relative text-4xl font-bold heading text-center md:text-left font-sarala'>
+            <h2 className='relative text-3xl sm:text-4xl font-bold heading text-center md:text-left font-sarala'>
               {displayText}
               {cursorVisible && (
-                <span className={`blinking-cursor ${isTyping ? "typing" : ""}`}>
+                <span
+                  className={`blinking-cursor ${
+                    isTyping ? "typing" : "hidden-cursor"
+                  }`}
+                >
                   |
                 </span>
               )}
-              <span className='absolute left-0 bottom-0 w-full h-4 bg-red-200 opacity-50 blur-sm transform translate-y-2 rounded-none'></span>
+              <span className='absolute left-1/2 bottom-[-5px] transform -translate-x-1/2 w-[102%] h-[7px] bg-red-300 opacity-50 blur-sm rounded-lg'></span>
             </h2>
           </motion.h1>
 
@@ -58,6 +62,10 @@ const Hero = () => {
             /* Blinking effect only while typing */
             .typing {
               animation: blink 1s infinite;
+            }
+
+            .hidden-cursor {
+              opacity: 0;
             }
 
             @keyframes blink {
@@ -98,7 +106,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className='mt-10 flex justify-center pb-10'
+        className='mt-10 flex flex-col items-center pb-10'
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -116,6 +124,9 @@ const Hero = () => {
             d='M19 9l-7 7-7-7'
           />
         </svg>
+        <p className='text-gray-600 text-sm mt-2 animate-pulse font-delius'>
+          Scroll down to see more details
+        </p>
       </motion.div>
     </section>
   );

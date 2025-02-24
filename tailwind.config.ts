@@ -13,6 +13,7 @@ const config: Config = {
         sarala: ["Sarala", "serif"],
         caveat: ["Caveat", "serif"],
         fuzzy: ["Fuzzy Bubbles", "serif"],
+        delius: ["Delius", "serif"],
       },
     },
   },

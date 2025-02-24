@@ -8,7 +8,7 @@ const projects = [
     id: 1,
     title: "Nutri Serve",
     description:
-      "A nutrition tracking app that helps users monitor food intake and get diet recommendations.",
+      "A smart nutrition tracking app that helps users log their meals, monitor calories, and get personalized diet recommendations for a healthier lifestyle.",
     video:
       "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/nutriserve.mp4",
     liveLink: "https://your-live-project.com",
@@ -22,7 +22,7 @@ const projects = [
     video:
       "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/MFLIX.mp4",
     description:
-      "A full-stack movie browsing application built with Node.js, Express, MongoDB, and Handlebars.",
+      "A full-stack movie browsing platform that allows users to explore, search, and filter movies while seamlessly integrating with a database-driven backend.",
     liveLink: "",
     githubLink: "https://github.com/chandrikakillada/MFLIX",
     tech: ["Express", "MongoDB", "Node.js"],
@@ -32,7 +32,8 @@ const projects = [
     title: "Omnifood",
     video:
       "https://user-images.githubusercontent.com/37527885/128391666-0c4a4021-f22c-4519-9d8e-7d3a712e9889.mp4",
-    description: "A full-stack food browsing application built with Node.js",
+    description:
+      "A responsive food ordering platform that showcases an elegant UI and smooth user experience, built with modern web technologies.",
     liveLink: "https://bright-bonbon-9d881a.netlify.app/",
     githubLink: "https://github.com/chandrikakillada/Omnifood",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -49,27 +50,24 @@ const Projects = () => {
   }, []);
 
   return (
-    <section
-      id='projects'
-      className='font-quicksand py-20  relative background'
-    >
-      <div className='flex justify-center relative text-3xl font-bold text-center inline-block pb-2 font-sarala mt-0'>
-        <h2 className='relative heading'>
+    <section id='projects' className='font-quicksand py-16 relative background'>
+      <div className='flex justify-center text-2xl md:text-3xl font-bold text-center pb-4 font-sarala px-4 md:px-0'>
+        <h2 className='relative heading leading-tight md:leading-normal'>
           These are the projects that define my journey in development.
-          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
+          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 opacity-40 rounded-md blur-sm hidden sm:block'></span>
         </h2>
       </div>
 
-      <div className='mt-10 max-w-5xl mx-auto px-6 space-y-16'>
+      <div className='mt-8 max-w-5xl mx-auto px-4 sm:px-6 space-y-12 md:space-y-16'>
         {projects.map((project, projectIndex) => (
           <motion.div
             key={project.id}
-            className='flex flex-col md:flex-row-reverse md:items-center justify-between bg-white rounded-lg shadow-lg p-8 md:p-10 relative gap-8'
+            className='flex flex-col md:flex-row-reverse md:items-center bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10 relative gap-6 md:gap-8'
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: projectIndex * 0.2 }}
           >
-            <div className='w-full md:w-[45%] flex flex-col items-start space-y-4 md:space-y-5 mt-4 md:mt-0'>
+            <div className='w-full md:w-[45%] flex flex-col items-start space-y-4'>
               <h3 className='text-lg font-bold text-gray-800'>
                 {project.title}
               </h3>
@@ -79,7 +77,7 @@ const Projects = () => {
               </p>
 
               {showTech && (
-                <div className='relative flex flex-wrap md:flex-col space-y-3 md:space-y-2'>
+                <div className='relative flex flex-wrap md:flex-col space-y-2 md:space-y-3'>
                   {project.tech.map((tech, techIndex) => (
                     <motion.div
                       key={techIndex}
@@ -89,9 +87,9 @@ const Projects = () => {
                         duration: 0.5,
                         delay: techIndex * 0.15,
                       }}
-                      className='relative flex items-center space-x-3 md:space-x-2 mt-1'
+                      className='relative flex items-center space-x-2 mt-1 mr-2'
                     >
-                      <span className='px-4 py-2 text-xs md:text-sm font-semibold bg-red-400 text-white rounded-lg'>
+                      <span className='px-4 py-2 text-xs md:text-sm font-bold bg-red-400 text-white rounded-lg'>
                         {tech}
                       </span>
                     </motion.div>
@@ -121,10 +119,11 @@ const Projects = () => {
               </div>
             </div>
 
+            {/* Right Section: Project Video */}
             <div className='w-full md:w-[55%] relative'>
               <video
                 src={project.video}
-                className='w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover rounded-lg'
+                className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] object-cover rounded-lg'
                 autoPlay
                 loop
                 muted
