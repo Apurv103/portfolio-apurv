@@ -128,9 +128,9 @@ const Experience = () => {
       </div>
 
       <div className='flex justify-center relative text-xl font-bold text-center inline-block pb-2 font-sarala mt-6'>
-        <h2 className='relative heading '>
+        <h2 className='relative heading'>
           From There to Here: My Career Timeline 🏫
-          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
+          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 opacity-70 rounded-md transform translate-y-2 hidden md:block blur-sm md:blur-md'></span>
         </h2>
       </div>
 
