@@ -85,7 +85,7 @@ const Contact = () => {
               </a>
 
               <a
-                href='https://github.com/Apurv@103'
+                href='https://github.com/Apurv103'
                 target='_blank'
                 rel='noopener noreferrer'
               >
