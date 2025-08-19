@@ -38,7 +38,7 @@ const FloatingNavbar = () => {
   }, []);
 
   return (
-    <nav className='fixed top-1/3 right-4 sm:right-6 flex flex-col space-y-4 p-2 sm:p-4 bg-white/80 rounded-lg shadow-lg z-50'>
+    <nav className='fixed top-1/3 right-4 sm:right-6 flex flex-col space-y-4 p-2 sm:p-4 bg-black/70 rounded-lg shadow-lg z-50 border border-cyan-500/30 backdrop-blur neon-border'>
       {sections.map((section) => (
         <button
           key={section.id}
@@ -49,8 +49,8 @@ const FloatingNavbar = () => {
           }
           className={`p-3 sm:p-4 rounded-full transition ${
             activeSection === section.id
-              ? "bg-red-500 text-white"
-              : "bg-gray-200 text-gray-800"
+              ? "bg-cyan-500 text-black neon-glow"
+              : "bg-slate-800 text-cyan-300 border border-cyan-500/30"
           }`}
         >
           {section.icon}

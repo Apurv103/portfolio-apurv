@@ -24,71 +24,117 @@ const floatingIcons = [
 const experiences = [
   {
     title: "Full Stack Engineer Intern",
-    company: "Suncrest Services Inc",
-    date: "Oct 2023 - Apr 2024",
+    company: "FireFly Spark",
+    date: "July 2025 - Continue",
     description: [
-      " ⚡ Spearheaded the modernization of a legacy .NET B2B platform, rebuilding its UI with Angular and Tailwind CSS, resulting in a 15% increase in user engagement",
-      " ⚡ Optimized performance by developing and fine-tuning Angular components, reducing front-end development time by 50%.",
-      "⚡ Enhanced data synchronization for 20,000+ transactions by implementing RESTful API integrations using Angular services.",
-      "  ⚡ Transformed user experience by creating interactive Figma prototypes and utilizing Angular CLI, ensuring a seamless design-to-development transition.",
+      "⚡ Built a mobile-first app using React Native and FastAPI, with focus on real-time user onboarding, Google OAuth 2.0 authentication, and location tracking.",
+      "⚡ Developed secure REST APIs and integrated third-party services including Google Maps API (geolocation), ID Analyzer API, Standard ID Scan API, and Plaid API for ID and financial verification.",
+      "⚡ Engineered and optimized PostgreSQL schemas and integrated AWS S3 for secure document and image storage, ensuring data integrity and scalable access.",
+      "⚡ Deployed backend on Render using a cloud Linux server, achieving scalability, HTTPS security, structured logging, and centralized error handling.",
+      "⚡ Created modular UI components with navigation, modals, and input validations, boosting frontend development efficiency by 30%.",
     ],
     techStack: [
-      "Angular",
-      "React",
-      "Figma",
-      "Tailwind CSS",
+      "React Native",
       "FastAPI",
-      "Material UI",
+      "PostgreSQL",
+      "AWS S3",
+      "Render",
+      "Google Maps API",
+      "Google OAuth 2.0",
+      "ID Analyzer API",
+      "Standard ID Scan API",
+      "Plaid API",
     ],
-    icon: <FaBriefcase className='text-red-500 text-xl' />,
+    icon: <FaBriefcase className='text-cyan-400 text-xl neon-glow' />,
     type: "work",
   },
   {
-    title: "Project Engineer",
-    company: "Wipro Limited",
-    date: "Mar 2021 - Jul 2022",
+    title: "Software Developer",
+    company: "St. Clair College @ Ace Acumen ",
+    date: "May 2023 - May 2025",
     description: [
-      "⚡ Developed and maintained full-stack features for a Banking platform.",
-      "⚡ Implemented API integrations and optimized database queries.",
-      "📈 Launched bereavement support pages, increasing user engagement.",
-      "⚡ Reduced page load times using lazy loading for improved performance.",
+      "✨ Built a Student Info & LMS adopted by 500+ students and 40+ faculty for content delivery, attendance, access control, and analytics.",
+      "⚡ Developed scalable, responsive modules using React.js (15+ components) and Node.js/Express APIs (30+ endpoints), reducing manual academic tracking efforts by 70%.",
+      "🗄️ Designed and optimized normalized SQL schemas for 8+ core entities (students, courses, attendance, assessments), improving query performance by 40%.",
+      "📊 Leveraged Microsoft Graph API and Power BI REST API with CORS, enabling secure data sync, embedded analytics, and seamless frontend-backend communication.",
+      "🔐 Integrated JWT-based authentication and Role-Based Access Control (RBAC) for 3 distinct user roles (admin, faculty, student), enhancing data security and access efficiency.",
     ],
-    techStack: ["Angular", "Spring Boot", "MySQL", "Docker", "Kubernetes"],
-    icon: <FaBriefcase className='text-red-500 text-xl' />,
-    type: "work",
-  },
-  {
-    title: "Post Graduate Certificate in IT",
-    company: "Humber College",
-    date: "Sep 2022 - Apr 2024",
-    description: [
-      "🏆 Dean’s Honour List Awardee for academic excellence.",
-      " 🛠 Hands-on experience in Web Development, Software Engineering & Cloud Computing.",
-      "  🔗 Strengthened problem-solving with OOP, DSA & Database Management.",
-    ],
-    link: "https://www.linkedin.com/posts/chandrikakillada_deanslist-humbercollege-appliedsciences-activity-7164469223375777792-6zWi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfUx6kB5PP0vfkIi4V0h6H8Mx_Nx435SGk",
     techStack: [
-      "Software Engineering",
-      "OOP",
-      "Database Management Systems",
-      "DSA",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "SQL (MySQL/SQL Server)",
+      "Microsoft Graph API",
+      "Power BI REST API",
+      "JWT Authentication",
+      "Role-Based Access Control (RBAC)",
+      "CORS"
     ],
-    icon: <FaGraduationCap className='text-red-500' />,
-    type: "education",
+    
+    icon: <FaBriefcase className='text-cyan-400 text-xl neon-glow' />,
+    type: "work",
   },
   {
-    title: "B.Tech in Computer Science & Engineering",
-    company: "JNTUH",
-    date: "Apr 2016 - Sep 2020",
+    title: "Full Stack Developer",
+    company: "Webito Infotech",
+    date: "June 2021 – March 2023",
     description: [
-      "🖥️ Built a strong foundation in Data Structures, Algorithms & OOP.",
-      "   📊 Developed & deployed real-world projects using C, C++, and Java.",
-      "   🚀 Participated in coding competitions & hackathons, enhancing problem-solving skills.",
+      "🛠️ Developed a multi-tenant Inventory Management System using FastAPI and React Native for 100+ stores.",
+      "📦 Built a scalable multi-tenant inventory system with integrated barcode scanning, GPS-based store tracking via Google Maps API, and real-time inventory synchronization through FastAPI REST APIs, reducing manual tracking efforts by 65%.",
+      "⚡ Optimized high-frequency PostgreSQL queries and implemented Stripe API for seamless billing and payment workflows.",
+      "🚗 Added vehicle access logging with Plate Recognizer API and automated alerts using Twilio SMS API, enhancing operational visibility and security.",
     ],
-    techStack: ["C", "C++", "Data Structures", "Algorithms"],
-    icon: <FaGraduationCap className='text-red-500' />,
+    techStack: [
+      "FastAPI",
+      "React Native",
+      "PostgreSQL",
+      "Google Maps API",
+      "Stripe API",
+      "Plate Recognizer API",
+      "Twilio SMS API",
+      "RESTful APIs"
+    ],
+    icon: <FaBriefcase className='text-cyan-400 text-xl neon-glow' />,
+    type: "work",
+  },
+  
+  {
+    title: "Master of Applied Computing",
+    company: "University of Windsor",
+    date: "May 2022 - Oct 2023",
+    description: [
+      "📘 Specialized coursework in Advanced Software Engineering, Distributed Systems, Advanced Database Management, and Internet Applications.",
+      "🚀 Completed multiple hands-on academic projects, consistently earning bonus marks for building advanced features and exceeding project requirements.",
+      "💡 Applied agile methodologies and full-stack development practices across projects, bridging theory with real-world software engineering challenges.",
+      "🎯 Internship project focused on designing scalable software systems, integrating cloud solutions, and optimizing database performance.",
+    ],
+    techStack: [
+      "Advanced Software Engineering",
+      "Distributed Systems",
+      "Database Management",
+      "Internet Applications",
+      "Agile Development",
+      "Full Stack Projects"
+    ],
+    icon: <FaGraduationCap className='text-cyan-400 neon-glow' />,
     type: "education",
   },
+  
+  {
+    title: "Bachelor of Technology in Information Technology",
+    company: "Kadi Sarva Vishwavidhyalaya",
+    date: "August 2017 - June 2021",
+    description: [
+      "🏅 Graduated among the **Top 5 students** throughout the degree program.",
+      "🖥️ Built a strong foundation in **Data Structures, Algorithms, and Object-Oriented Programming (OOP)**.",
+      "📊 Developed & deployed **real-world projects** using C, C++, and Java.",
+      "🚀 Participated in **coding competitions and hackathons**, enhancing problem-solving and teamwork skills.",
+    ],
+    techStack: ["C", "C++", "Java", "Data Structures", "Algorithms", "OOP"],
+    icon: <FaGraduationCap className='text-cyan-400 neon-glow' />,
+    type: "education",
+  },
+  
 ];
 
 const Experience = () => {
@@ -137,7 +183,7 @@ const Experience = () => {
       <div className='flex justify-center relative text-xl font-bold text-center inline-block pb-2 font-sarala mt-6'>
         <h2 className='relative heading'>
           From There to Here: My Career Timeline 🏫
-          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 opacity-70 rounded-md transform translate-y-2 hidden md:block blur-sm md:blur-md'></span>
+          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-cyan-500/40 opacity-70 rounded-md transform translate-y-2 hidden md:block blur-sm md:blur-md neon-glow'></span>
         </h2>
       </div>
 
@@ -150,21 +196,21 @@ const Experience = () => {
             transition={{ duration: 0.6, delay: index * 0.2 }}
             className='mb-10 relative flex flex-col md:flex-row md:items-start md:text-left items-center text-center'
           >
-            <div className='text-sm font-bold text-black md:w-1/4 md:text-right mt-3'>
+            <div className='text-sm font-bold text-gray-300 md:w-1/4 md:text-right mt-3'>
               {exp.date}
             </div>
 
-            <div className='p-3 bg-white shadow-md rounded-full border border-red-400 flex items-center justify-center my-4 md:my-0 md:ml-4 mr-4'>
+            <div className='p-3 bg-black/50 shadow-md rounded-full border border-cyan-400 flex items-center justify-center my-4 md:my-0 md:ml-4 mr-4 neon-border'>
               {exp.icon}
             </div>
 
-            <div className='w-full bg-pink-50 p-6 rounded-lg shadow-lg md:w-3/4'>
-              <h3 className='text-xl font-bold text-red-800'>{exp.title}</h3>
-              <h4 className='text-lg text-red-500 font-semibold'>
+            <div className='w-full bg-black/50 p-6 rounded-lg shadow-lg md:w-3/4 border border-cyan-500/30 neon-border'>
+              <h3 className='text-xl font-bold text-cyan-300'>{exp.title}</h3>
+              <h4 className='text-lg text-cyan-400 font-semibold'>
                 {exp.company}
               </h4>
 
-              <div className='text-black mt-3 space-y-2'>
+              <div className='text-cyan-100 mt-3 space-y-2'>
                 {exp.description.map((desc, i) => (
                   <p key={i}>{desc}</p>
                 ))}
@@ -174,7 +220,7 @@ const Experience = () => {
                 {exp.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className='bg-red-400 text-white px-3 py-1 text-sm font-semibold rounded-lg'
+                    className='bg-cyan-600 text-white px-3 py-1 text-sm font-semibold rounded-lg neon-glow'
                   >
                     {tech}
                   </span>

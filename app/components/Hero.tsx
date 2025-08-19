@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const text = "Hi! I'm Chandrika 👋";
+  const text = "  APURV PATEL";
   const [displayText, setDisplayText] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
   const [isTyping, setIsTyping] = useState(true);
@@ -33,12 +33,12 @@ const Hero = () => {
       <div className='flex flex-col md:flex-row items-center justify-between text-center md:text-left py-20 px-6 md:px-12 lg:px-24 pt-60'>
         <div className='md:w-1/2'>
           <motion.h1
-            className='dark:text-red-400 relative inline-block leading-snug'
+            className='text-cyan-400 relative inline-block leading-snug'
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className='relative text-3xl sm:text-4xl font-bold heading text-center md:text-left font-sarala'>
+            <span className='relative text-3xl sm:text-4xl font-bold heading text-center md:text-left font-sarala'>
               {displayText}
               {cursorVisible && (
                 <span
@@ -49,8 +49,8 @@ const Hero = () => {
                   |
                 </span>
               )}
-              <span className='absolute left-1/2 bottom-[-5px] transform -translate-x-1/2 w-[102%] h-[7px] bg-red-300 opacity-50 blur-sm rounded-lg'></span>
-            </h2>
+              <span className='absolute left-1/2 bottom-[-5px] transform -translate-x-1/2 w-[102%] h-[7px] bg-cyan-500 opacity-60 blur-sm rounded-lg neon-glow'></span>
+            </span>
           </motion.h1>
 
           <style jsx>{`
@@ -76,15 +76,60 @@ const Hero = () => {
           `}</style>
 
           <motion.p
-            className='mt-4 text-lg md:text-xl text-gray-700 font-quicksand'
-            initial={{ opacity: 0, y: 20 }}
+            className='mt-3 text-base md:text-lg text-cyan-200 font-bold font-quicksand'
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            A <span className='text-red-500'>Full-Stack Developer </span>
-            passionate about crafting modern, scalable web applications. Turning
-            complex problems into elegant, user-friendly solutions. ✨
+            Software Engineer | Full-Stack & Mobile Apps (React.js, React Native, Node.js, Python) | REST/GraphQL APIs | SQL & NoSQL | Real-Time Features & CI/CD Cloud (AWS, Firebase)
           </motion.p>
+
+          <motion.p
+            className='mt-3 text-sm md:text-base text-cyan-100 font-semibold font-quicksand'
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            I design and build scalable, user-focused applications using modern
+            web technologies and cloud-native architectures.
+          </motion.p>
+
+          <motion.div
+            className='mt-6 flex flex-wrap gap-3'
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <a
+              href='/apurv_patel_.pdf'
+              download
+              className='px-5 py-2 rounded-lg bg-cyan-600 text-white hover:bg-cyan-500 transition neon-glow'
+            >
+              Download Resume
+            </a>
+            <a
+              href='#contact'
+              className='px-5 py-2 rounded-lg border border-cyan-400 text-cyan-300 hover:bg-cyan-900/30 transition neon-border'
+            >
+              Contact Me
+            </a>
+            <a
+              href='https://github.com/Apurv103'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-5 py-2 rounded-lg border border-cyan-400 text-cyan-300 hover:bg-cyan-900/30 transition neon-border'
+            >
+              GitHub
+            </a>
+            <a
+              href='https://www.linkedin.com/in/apurvpatel103301'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-5 py-2 rounded-lg border border-cyan-400 text-cyan-300 hover:bg-cyan-900/30 transition neon-border'
+            >
+              LinkedIn
+            </a>
+          </motion.div>
         </div>
 
         <motion.div
@@ -112,7 +157,7 @@ const Hero = () => {
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          className='h-10 w-10 text-gray-800 dark:text-red-400'
+          className='h-10 w-10 text-cyan-400 neon-glow'
           fill='none'
           viewBox='0 0 24 24'
           stroke='currentColor'
@@ -124,7 +169,7 @@ const Hero = () => {
             d='M19 9l-7 7-7-7'
           />
         </svg>
-        <p className='text-gray-600 text-sm mt-2 animate-pulse font-delius'>
+        <p className='text-cyan-200 text-sm mt-2 animate-pulse font-delius'>
           Scroll down to see more details
         </p>
       </motion.div>

@@ -6,39 +6,24 @@ import { useEffect, useState } from "react";
 const projects = [
   {
     id: 1,
-    title: "Nutri Serve",
+    title: "Prostore – Full-Stack E-Commerce App",
     description:
-      "A smart nutrition tracking app that helps users log their meals, monitor calories, and get personalized diet recommendations for a healthier lifestyle.",
-    video:
-      "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/nutriserve.mp4",
-    liveLink: "https://your-live-project.com",
-    githubLink:
-      "https://github.com/2024-Winter-ITE-5425-0NA/project-react-client-webdriver",
-    tech: ["React", "Node.js", "MongoDB"],
+      "A feature-rich online shopping platform built with Next.js, TypeScript, Prisma, PostgreSQL, and Tailwind CSS. Implemented secure authentication, Stripe/PayPal payments, and admin controls. Integrated Uploadthing for image uploads and Resend for email receipts, boosting user experience by 35%. Set up CI/CD pipeline on Vercel with GitHub integration, reducing manual deployment time by 80% and minimizing release errors by 50%.",
+    liveLink: "https://e-commerce-website-pi-two.vercel.app/", // if you deploy it, add the live URL here
+    githubLink: "https://github.com/Apurv103/E-Commerce-website-",
+    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Stripe", "PayPal", "Vercel CI/CD"],
   },
   {
     id: 2,
-    title: "MFLIX",
-    video:
-      "https://portfolio-chandrika-projects.s3.us-east-1.amazonaws.com/MFLIX.mp4",
+    title: "Q-Win – Seminar Management System",
     description:
-      "A full-stack movie browsing platform that allows users to explore, search, and filter movies while seamlessly integrating with a database-driven backend.",
-    liveLink: "",
-    githubLink: "https://github.com/chandrikakillada/MFLIX",
-    tech: ["Express", "MongoDB", "Node.js"],
-  },
-  {
-    id: 3,
-    title: "Omnifood",
-    video:
-      "https://user-images.githubusercontent.com/37527885/128391666-0c4a4021-f22c-4519-9d8e-7d3a712e9889.mp4",
-    description:
-      "A responsive food ordering platform that showcases an elegant UI and smooth user experience, built with modern vanilla JS.",
-    liveLink: "https://bright-bonbon-9d881a.netlify.app/",
-    githubLink: "https://github.com/chandrikakillada/Omnifood",
-    tech: ["HTML", "CSS", "JavaScript"],
+      "A React + TypeScript based seminar management system for the University of Windsor. Solved website crashes and manual entry issues, supporting 500+ concurrent users via Firebase backend. Integrated Microsoft Authentication for secure access and implemented Dynamic QR Codes with SHA-256 hashing, improving attendance tracking efficiency by 50% and reducing manual workloads by 70%.",
+    liveLink: "qwin.web.app", // if deployed, add live demo link
+    githubLink: "https://github.com/Apurv103/Q-Win",
+    tech: ["React", "TypeScript", "Firebase", "Microsoft Authentication", "SHA-256 QR Codes"],
   },
 ];
+
 
 const Projects = () => {
   const [showTech, setShowTech] = useState(false);
@@ -54,7 +39,7 @@ const Projects = () => {
       <div className='flex justify-center relative text-xl font-bold text-center inline-block pb-2 font-sarala mt-6'>
         <h2 className='relative heading'>
           These are the projects that define my journey in development.
-          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 opacity-70 rounded-md transform translate-y-2 hidden md:block blur-sm md:blur-md'></span>
+          <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-cyan-500/40 opacity-70 rounded-md transform translate-y-2 hidden md:block blur-sm md:blur-md neon-glow'></span>
         </h2>
       </div>
 
@@ -62,17 +47,17 @@ const Projects = () => {
         {projects.map((project, projectIndex) => (
           <motion.div
             key={project.id}
-            className='flex flex-col md:flex-row-reverse md:items-center bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10 relative gap-6 md:gap-8'
+            className='flex flex-col md:flex-row md:items-center bg-black/50 rounded-lg shadow-lg p-6 sm:p-8 md:p-10 relative gap-6 md:gap-8 border border-cyan-500/30 neon-border'
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: projectIndex * 0.2 }}
           >
-            <div className='w-full md:w-[45%] flex flex-col items-start space-y-4'>
-              <h3 className='text-lg font-bold text-gray-800'>
+            <div className='w-full flex flex-col items-start space-y-4'>
+              <h3 className='text-lg font-bold text-cyan-300'>
                 {project.title}
               </h3>
 
-              <p className='text-sm text-gray-900 leading-relaxed'>
+              <p className='text-sm text-cyan-100 leading-relaxed'>
                 {project.description}
               </p>
 
@@ -89,7 +74,7 @@ const Projects = () => {
                       }}
                       className='relative flex items-center space-x-2 mt-1 mr-2'
                     >
-                      <span className='px-4 py-2 text-xs md:text-sm font-bold bg-red-400 text-white rounded-lg'>
+                      <span className='px-4 py-2 text-xs md:text-sm font-bold bg-cyan-600 text-white rounded-lg neon-glow'>
                         {tech}
                       </span>
                     </motion.div>
@@ -103,7 +88,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='px-5 py-2 bg-gray-700 hover:bg-red-400 text-white rounded-lg text-sm font-semibold text-center transition duration-300'
+                    className='px-5 py-2 bg-slate-800 hover:bg-cyan-600 text-white rounded-lg text-sm font-semibold text-center transition duration-300 border border-cyan-500/30 neon-border'
                   >
                     View Live
                   </a>
@@ -112,22 +97,11 @@ const Projects = () => {
                   href={project.githubLink}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='px-5 py-2 bg-gray-700 hover:bg-red-400 text-white rounded-lg text-sm font-semibold text-center transition duration-300'
+                  className='px-5 py-2 bg-slate-800 hover:bg-cyan-600 text-white rounded-lg text-sm font-semibold text-center transition duration-300 border border-cyan-500/30 neon-border'
                 >
                   GitHub
                 </a>
               </div>
-            </div>
-
-            {/* Right Section: Project Video */}
-            <div className='w-full md:w-[55%] relative'>
-              <video
-                src={project.video}
-                className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] object-cover rounded-lg'
-                autoPlay
-                loop
-                muted
-              />
             </div>
           </motion.div>
         ))}

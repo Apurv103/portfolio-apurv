@@ -54,7 +54,7 @@ const Contact = () => {
         <div className=' relative text-3xl font-bold text-center inline-block pb-2 font-sarala mt-12'>
           <h2 className='relative heading'>
             Let &apos;s Connect! 💌
-            <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-red-200 blur-sm opacity-40 rounded-md transform translate-y-2'></span>
+            <span className='absolute inset-x-0 bottom-[-6px] h-5 bg-cyan-500/40 blur-sm opacity-40 rounded-md transform translate-y-2 neon-glow'></span>
           </h2>
         </div>
 
@@ -72,7 +72,7 @@ const Contact = () => {
               turn ideas into reality. ✨
             </p>
 
-            <div className='mt-6 flex justify-center md:justify-start space-x-6 text-red-400'>
+            <div className='mt-6 flex justify-center md:justify-start space-x-6 text-cyan-300'>
               <a
                 href='https://linkedin.com/in/chandrikakillada'
                 target='_blank'
@@ -80,7 +80,7 @@ const Contact = () => {
               >
                 <FaLinkedin
                   size={30}
-                  className='hover:text-pink-600 transition'
+                  className='hover:text-cyan-400 transition neon-glow'
                 />
               </a>
 
@@ -91,7 +91,7 @@ const Contact = () => {
               >
                 <FaGithub
                   size={30}
-                  className='hover:text-pink-600 transition'
+                  className='hover:text-cyan-400 transition neon-glow'
                 />
               </a>
               <a
@@ -101,7 +101,7 @@ const Contact = () => {
               >
                 <FaEnvelope
                   size={30}
-                  className='hover:text-pink-600 transition'
+                  className='hover:text-cyan-400 transition neon-glow'
                 />
               </a>
             </div>
@@ -113,17 +113,14 @@ const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <form
-              onSubmit={handleSubmit}
-              className='bg-white p-6 rounded-lg shadow-md'
-            >
+            <form onSubmit={handleSubmit} className='bg-black/50 p-6 rounded-lg shadow-md border border-cyan-500/30 neon-border'>
               <input
                 type='text'
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
                 placeholder='Name'
-                className='w-full p-3 border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 mb-4'
+                className='w-full p-3 border border-cyan-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-4 bg-black/70 text-cyan-100 placeholder-cyan-300/50'
               />
               <input
                 type='email'
@@ -131,7 +128,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder='Email'
-                className='w-full p-3 border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 mb-4'
+                className='w-full p-3 border border-cyan-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-4 bg-black/70 text-cyan-100 placeholder-cyan-300/50'
               />
               <textarea
                 name='message'
@@ -139,22 +136,22 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder='Message'
                 rows={4}
-                className='w-full p-3 border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 mb-4'
+                className='w-full p-3 border border-cyan-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-4 bg-black/70 text-cyan-100 placeholder-cyan-300/50'
               ></textarea>
               <button
                 type='submit'
-                className='w-full bg-red-400 text-white p-3 rounded-lg hover:bg-red-500 transition'
+                className='w-full bg-cyan-600 text-white p-3 rounded-lg hover:bg-cyan-500 transition neon-glow'
               >
                 SEND MESSAGE
               </button>
 
               {status.success && (
-                <p className='text-green-500 mt-2 text-center'>
+                <p className='text-green-400 mt-2 text-center'>
                   ✅ Message sent successfully!
                 </p>
               )}
               {status.error && (
-                <p className='text-red-500 mt-2 text-center'>
+                <p className='text-red-400 mt-2 text-center'>
                   ❌ Failed to send message. Try again later.
                 </p>
               )}

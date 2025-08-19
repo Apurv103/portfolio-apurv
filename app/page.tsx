@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className='min-h-screen bg-blue-50'>
+    <main className='min-h-screen bg-[#0a0a0a] text-cyan-100'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
