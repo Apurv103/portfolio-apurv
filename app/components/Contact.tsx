@@ -74,7 +74,7 @@ const Contact = () => {
 
             <div className='mt-6 flex justify-center md:justify-start space-x-6 text-cyan-300'>
               <a
-                href='https://linkedin.com/in/chandrikakillada'
+                href='https://linkedin.com/in/apurvpatel103301'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -85,7 +85,7 @@ const Contact = () => {
               </a>
 
               <a
-                href='https://github.com/chandrikakillada'
+                href='https://github.com/Apurv@103'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -95,7 +95,7 @@ const Contact = () => {
                 />
               </a>
               <a
-                href='mailto:chandrikakvenu@email.com'
+                href='mailto:apurvpatel9331@gmail.com'
                 target='_blank'
                 rel='noopener noreferrer'
               >
